@@ -1,49 +1,60 @@
 $(document).ready(function () {
+  // navbar hide in scroll down
+  // var prevScrollpos = window.pageYOffset;
+  // window.onscroll = function () {
+  //   var currentScrollPos = window.pageYOffset;
+  //   if (prevScrollpos > currentScrollPos) {
+  //     $(".headerSearch").removeClass("hide");
 
-    //MainSlider
-    var mainSlider = new Swiper(".mainSliderContainer", {
-      spaceBetween: 0,
-      loop: true,
-      effect: "fade",
-      speed: 500,
-      autoplay: {
-        delay: 8000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".mainSliderNext",
-        prevEl: ".mainSliderPrev",
-      },
-    });
+  //   } else {
+  //     $(".headerSearch").addClass("hide");
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // };
 
-        // services slider
-        var servicesSlider = new Swiper(".servicesSlider", {
-          navigation: {
-            nextEl: ".servicesSliderNext",
-            prevEl: ".servicesSliderPrev",
-          },
-          pagination: {
-            el: ".servicesSlidePagination",
-            type: "fraction",
-          },
-          // loop: true,
-          spaceBetween: 30,
-          speed: 1000,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-          slidesPerView: "auto",
-        });
-        $(".servicesSlider").hover(
-          function () {
-            this.swiper.autoplay.stop();
-          },
-          function () {
-            this.swiper.autoplay.start();
-          }
-        );
+  //MainSlider
+  var mainSlider = new Swiper(".mainSliderContainer", {
+    spaceBetween: 0,
+    loop: true,
+    effect: "fade",
+    speed: 500,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".mainSliderNext",
+      prevEl: ".mainSliderPrev",
+    },
+  });
 
+  // services slider
+  var servicesSlider = new Swiper(".servicesSlider", {
+    navigation: {
+      nextEl: ".servicesSliderNext",
+      prevEl: ".servicesSliderPrev",
+    },
+    pagination: {
+      el: ".servicesSlidePagination",
+      type: "fraction",
+    },
+    // loop: true,
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+  });
+  $(".servicesSlider").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -86,6 +97,6 @@ $(document).ready(function () {
     delay: 50,
     duration: 1000,
     // easing: "linear",
-    once: false,
+    once: true,
   });
 });

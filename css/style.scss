@@ -358,105 +358,102 @@ button {
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
-header {
+.topNav {
   display: flex;
-  flex-direction: column;
-  .topNav {
+  gap: 16px;
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px 0;
+  .links {
     display: flex;
-    gap: 16px;
-    width: min(100% - 24px, 1320px);
-    margin: auto;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 4px 0;
-    .links {
+    gap: 24px;
+    @media (max-width: 576px) {
+      flex: 1;
+      justify-content: center;
+    }
+    a {
       display: flex;
+      gap: 4px;
       align-items: center;
-      gap: 24px;
+      color: var(--blackColor);
       @media (max-width: 576px) {
-        flex: 1;
-        justify-content: center;
-      }
-      a {
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        color: var(--blackColor);
-        @media (max-width: 576px) {
-          span {
-            display: none;
-          }
-          i {
-            font-size: 20px;
-          }
+        span {
+          display: none;
         }
         i {
-          color: var(--secondColor);
+          font-size: 20px;
         }
       }
-    }
-    .dropDowns {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      background-color: #00000010;
-      padding: 12px 24px;
-      border-radius: 8px;
+      i {
+        color: var(--secondColor);
+      }
     }
   }
-  .navbar {
-    background-color: #f4f4f4;
-    padding: 16px 0;
-    .container {
-      gap: 24px;
+  .dropDowns {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    background-color: #00000010;
+    padding: 12px 24px;
+    border-radius: 8px;
+  }
+}
+.navbar {
+  background-color: #f4f4f4;
+  padding: 16px 0;
+  .container {
+    gap: 24px;
+  }
+  .logo {
+    display: flex;
+    flex: 1 200px;
+    img {
+      height: 40px;
+      object-fit: contain;
     }
-    .logo {
-      display: flex;
-      flex: 1 200px;
-      img {
-        height: 40px;
-        object-fit: contain;
+  }
+  .navbar-collapse {
+    padding: 16px 12px;
+    flex: 1 750px;
+  }
+  @media (max-width: 768px) {
+    .dropdown .dropdown-menu {
+      &::before,
+      &::after {
+        display: none !important;
       }
     }
-    .navbar-collapse {
-      padding: 16px 12px;
-      flex: 1 750px;
-    }
-    @media (max-width: 768px) {
-      .dropdown .dropdown-menu {
-        &::before,
-        &::after {
-          display: none !important;
-        }
-      }
-    }
-    .search {
-      position: relative;
+  }
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 300px;
+    i {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 8px;
-      flex: 1 300px;
-      i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 32px;
-        height: 32px;
-        background-color: var(--mainColor);
-        border-radius: 100px;
-        color: var(--whiteColor);
-        position: absolute;
-        right: 8px;
-        font-size: 14px;
-      }
-      input {
-        padding: 12px;
-        padding-right: 48px;
-      }
+      min-width: 32px;
+      height: 32px;
+      background-color: var(--mainColor);
+      border-radius: 100px;
+      color: var(--whiteColor);
+      position: absolute;
+      right: 8px;
+      font-size: 14px;
+    }
+    input {
+      padding: 12px;
+      padding-right: 48px;
     }
   }
 }
+
 .mainSlider {
   position: relative;
   overflow: hidden;
@@ -700,7 +697,6 @@ header {
     }
   }
 }
-
 .SectionTitle {
   position: relative;
   padding: 30px;
@@ -718,9 +714,9 @@ header {
     color: var(--textColor);
   }
 }
-
 .services {
   padding-top: 50px;
+  overflow-x: hidden;
   .swiper-wrapper {
     padding: 30px 0px 80px;
     .swiper-slide {

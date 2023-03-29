@@ -383,11 +383,7 @@ button {
   box-shadow: none;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-}
-header .topNav {
+.topNav {
   display: flex;
   gap: 16px;
   width: min(100% - 24px, 1320px);
@@ -397,35 +393,35 @@ header .topNav {
   flex-wrap: wrap;
   padding: 4px 0;
 }
-header .topNav .links {
+.topNav .links {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 @media (max-width: 576px) {
-  header .topNav .links {
+  .topNav .links {
     flex: 1;
     justify-content: center;
   }
 }
-header .topNav .links a {
+.topNav .links a {
   display: flex;
   gap: 4px;
   align-items: center;
   color: var(--blackColor);
 }
 @media (max-width: 576px) {
-  header .topNav .links a span {
+  .topNav .links a span {
     display: none;
   }
-  header .topNav .links a i {
+  .topNav .links a i {
     font-size: 20px;
   }
 }
-header .topNav .links a i {
+.topNav .links a i {
   color: var(--secondColor);
 }
-header .topNav .dropDowns {
+.topNav .dropDowns {
   display: flex;
   gap: 24px;
   align-items: center;
@@ -433,39 +429,40 @@ header .topNav .dropDowns {
   padding: 12px 24px;
   border-radius: 8px;
 }
-header .navbar {
+
+.navbar {
   background-color: #f4f4f4;
   padding: 16px 0;
 }
-header .navbar .container {
+.navbar .container {
   gap: 24px;
 }
-header .navbar .logo {
+.navbar .logo {
   display: flex;
   flex: 1 200px;
 }
-header .navbar .logo img {
+.navbar .logo img {
   height: 40px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-header .navbar .navbar-collapse {
+.navbar .navbar-collapse {
   padding: 16px 12px;
   flex: 1 750px;
 }
 @media (max-width: 768px) {
-  header .navbar .dropdown .dropdown-menu::before, header .navbar .dropdown .dropdown-menu::after {
+  .navbar .dropdown .dropdown-menu::before, .navbar .dropdown .dropdown-menu::after {
     display: none !important;
   }
 }
-header .navbar .search {
+.navbar .search {
   position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
   flex: 1 300px;
 }
-header .navbar .search i {
+.navbar .search i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,7 +475,7 @@ header .navbar .search i {
   right: 8px;
   font-size: 14px;
 }
-header .navbar .search input {
+.navbar .search input {
   padding: 12px;
   padding-right: 48px;
 }
@@ -733,6 +730,7 @@ header .navbar .search input {
 
 .services {
   padding-top: 50px;
+  overflow-x: hidden;
 }
 .services .swiper-wrapper {
   padding: 30px 0px 80px;
