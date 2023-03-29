@@ -453,7 +453,6 @@ button {
     }
   }
 }
-
 .mainSlider {
   position: relative;
   overflow: hidden;
@@ -550,12 +549,12 @@ button {
         transition: 0.3s ease-in-out;
       }
       .info {
-        padding-right: 120px;
-        max-width: 1000px;
+        max-width: 800px;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 12px;
         text-align: center;
         @media (max-width: 768px) {
@@ -643,7 +642,6 @@ button {
 }
 .btnDefault {
   width: fit-content;
-  margin: auto;
   position: relative;
   display: inline-flex;
   gap: 8px;
@@ -672,6 +670,12 @@ button {
     z-index: 20;
     transition: all 0.3s ease-in-out;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    i{
+      font-weight: 400;
+    }
   }
   &:hover {
     // border: 1px solid #fff;
@@ -795,19 +799,19 @@ button {
       height: 100%;
       display: flex;
       flex-direction: column;
+      gap: 24px;
       img {
         width: 64px;
         height: 64px;
         object-fit: contain;
-        margin-bottom: 30px;
       }
       h5 {
         font-weight: bold;
         color: var(--mainColor);
-        margin-bottom: 15px;
       }
       p {
         color: #777;
+        margin-top: -16px;
       }
       a {
         margin-top: auto;
