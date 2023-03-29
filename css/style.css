@@ -315,16 +315,15 @@ span.select2.select2-container.select2-container--default {
 }
 .dropdown .dropdown-menu {
   animation: fadeIn 0.3s;
-  background-color: var(--mainColor30);
+  background-color: var(--whiteColor);
   border: none;
   padding: 8px;
   box-shadow: 0px 4px 8px var(--mainColor10);
-  border: 2px solid #fff;
+  border: 2px solid var(--mainColor30);
   z-index: 1022;
   flex-direction: column;
   gap: 4px;
-  width: -moz-max-content;
-  width: max-content;
+  width: auto;
   min-width: 100px;
   transform: unset !important;
 }
@@ -341,20 +340,20 @@ span.select2.select2-container.select2-container--default {
   content: "";
   width: 16px;
   height: 16px;
-  background-color: var(--mainColor30);
+  background-color: var(--whiteColor);
   position: absolute;
   top: -8px;
   left: 24px;
   transform: rotate(45deg);
   border-radius: 2px;
   z-index: -2;
-  border: 2px solid #fff;
+  border: 2px solid var(--mainColor30);
 }
 .dropdown .dropdown-menu::after {
   content: "";
   width: calc(100% - 4px);
   height: 24px;
-  background-color: var(--mainColor30);
+  background-color: var(--whiteColor);
   position: absolute;
   top: 0;
   z-index: -1;
@@ -375,6 +374,10 @@ button {
   background-color: transparent;
 }
 
+.form-control:focus {
+  box-shadow: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -393,6 +396,12 @@ header .topNav .links {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+@media (max-width: 576px) {
+  header .topNav .links {
+    flex: 1;
+    justify-content: center;
+  }
 }
 header .topNav .links a {
   display: flex;
@@ -423,6 +432,13 @@ header .navbar {
   background-color: #f4f4f4;
   padding: 16px 0;
 }
+header .navbar .container {
+  gap: 24px;
+}
+header .navbar .logo {
+  display: flex;
+  flex: 1 200px;
+}
 header .navbar .logo img {
   height: 40px;
   -o-object-fit: contain;
@@ -430,9 +446,34 @@ header .navbar .logo img {
 }
 header .navbar .navbar-collapse {
   padding: 16px 12px;
+  flex: 1 750px;
 }
 @media (max-width: 768px) {
   header .navbar .dropdown .dropdown-menu::before, header .navbar .dropdown .dropdown-menu::after {
     display: none !important;
   }
+}
+header .navbar .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 300px;
+}
+header .navbar .search i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 32px;
+  height: 32px;
+  background-color: var(--mainColor);
+  border-radius: 100px;
+  color: var(--whiteColor);
+  position: absolute;
+  right: 8px;
+  font-size: 14px;
+}
+header .navbar .search input {
+  padding: 12px;
+  padding-right: 48px;
 }/*# sourceMappingURL=style.css.map */

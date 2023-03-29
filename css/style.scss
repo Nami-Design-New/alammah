@@ -281,15 +281,15 @@ span.select2.select2-container.select2-container--default {
   }
   .dropdown-menu {
     animation: fadeIn 0.3s;
-    background-color: var(--mainColor30);
+    background-color: var(--whiteColor);
     border: none;
     padding: 8px;
     box-shadow: 0px 4px 8px var(--mainColor10);
-    border: 2px solid #fff;
+    border: 2px solid var(--mainColor30);
     z-index: 1022;
     flex-direction: column;
     gap: 4px;
-    width: max-content;
+    width: auto;
     min-width: 100px;
     transform: unset !important;
     .dropdown-item {
@@ -305,20 +305,20 @@ span.select2.select2-container.select2-container--default {
       content: "";
       width: 16px;
       height: 16px;
-      background-color: var(--mainColor30);
+      background-color: var(--whiteColor);
       position: absolute;
       top: -8px;
       left: 24px;
       transform: rotate(45deg);
       border-radius: 2px;
       z-index: -2;
-      border: 2px solid #fff;
+      border: 2px solid var(--mainColor30);
     }
     &::after {
       content: "";
       width: calc(100% - 4px);
       height: 24px;
-      background-color: var(--mainColor30);
+      background-color: var(--whiteColor);
       position: absolute;
       top: 0;
       z-index: -1;
@@ -338,6 +338,11 @@ span.select2.select2-container.select2-container--default {
 button {
   border: none;
   background-color: transparent;
+}
+.form-control{
+  &:focus{
+    box-shadow: none;
+  }
 }
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -366,6 +371,10 @@ header {
       display: flex;
       align-items: center;
       gap: 24px;
+      @media (max-width: 576px) {
+        flex: 1;
+        justify-content: center;
+      }
       a {
         display: flex;
         gap: 4px;
@@ -396,7 +405,12 @@ header {
   .navbar {
     background-color: #f4f4f4;
     padding: 16px 0;
+    .container{
+      gap: 24px;
+    }
     .logo {
+      display: flex;
+      flex: 1 200px;
       img {
         height: 40px;
         object-fit: contain;
@@ -404,6 +418,7 @@ header {
     }
     .navbar-collapse {
       padding: 16px 12px;
+      flex: 1 750px;
     }
     @media (max-width: 768px) {
       .dropdown .dropdown-menu {
@@ -413,5 +428,32 @@ header {
         }
       }
     }
+    .search{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1 300px;
+      i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 32px;
+        height: 32px;
+        background-color: var(--mainColor);
+        border-radius: 100px;
+        color: var(--whiteColor);
+        position: absolute;
+        right: 8px;
+        font-size: 14px;
+      }
+      input{
+       padding: 12px;
+       padding-right: 48px;
+
+      }
+      
+    }
+    
   }
 }
