@@ -1,6 +1,20 @@
 $(document).ready(function () {
 
-  
+    //MainSlider
+    var mainSlider = new Swiper(".mainSliderContainer", {
+      spaceBetween: 0,
+      loop: true,
+      effect: "fade",
+      speed: 500,
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".mainSliderNext",
+        prevEl: ".mainSliderPrev",
+      },
+    });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

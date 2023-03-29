@@ -82,6 +82,7 @@ h5,
 h6,
 p {
   margin: 0;
+  line-height: 1.5;
 }
 
 @media (max-width: 767px) {
@@ -476,4 +477,270 @@ header .navbar .search i {
 header .navbar .search input {
   padding: 12px;
   padding-right: 48px;
+}
+
+.mainSlider {
+  position: relative;
+  overflow: hidden;
+}
+.mainSlider .swiperBtns {
+  position: relative;
+  display: flex;
+}
+.mainSlider .swiperBtns .swiper-pagination {
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: unset;
+  bottom: unset;
+  right: unset;
+  left: unset;
+  color: #00897e;
+}
+.mainSlider .swiperBtns .swiper-pagination .swiper-pagination-current {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 8px;
+}
+.mainSlider .swiperBtns .swiper-pagination .swiper-pagination-total {
+  font-size: 20px;
+  margin: 0px 8px;
+  opacity: 0.6;
+}
+.mainSlider .swiperBtns .swiper-button-next,
+.mainSlider .swiperBtns .swiper-button-prev {
+  position: relative;
+  right: unset;
+  top: unset;
+  left: unset;
+  bottom: unset;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00897e;
+  width: auto;
+  transition: all 0.3 ease-in-out;
+}
+.mainSlider .swiperBtns .swiper-button-next::after,
+.mainSlider .swiperBtns .swiper-button-prev::after {
+  font-size: 40px;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .mainSlider .swiperBtns .swiper-button-next::after,
+  .mainSlider .swiperBtns .swiper-button-prev::after {
+    font-size: 30px;
+  }
+}
+.mainSlider .swiperBtns .swiper-button-next:hover,
+.mainSlider .swiperBtns .swiper-button-prev:hover {
+  color: #00897e;
+}
+.mainSlider .swiperBtns .swiper-button-next {
+  right: unset;
+}
+.mainSlider .swiperBtns .swiper-button-next::after {
+  content: "\f105" !important;
+}
+.mainSlider .swiperBtns .swiper-button-prev::after {
+  content: "\f105" !important;
+  transform: scaleX(-1);
+}
+.mainSlider .mainSliderContainer {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+}
+.mainSlider .mainSliderContainer .swiper-slide {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  isolation: isolate;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide {
+    height: 550px;
+  }
+}
+.mainSlider .mainSliderContainer .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 78, 158, 0.7568627451);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.mainSlider .mainSliderContainer .swiper-slide .info {
+  padding-right: 120px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide .info {
+    padding: 20px;
+  }
+}
+.mainSlider .mainSliderContainer .swiper-slide .info .sliderTitle {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px !important;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide .info .sliderTitle {
+    font-size: 24px !important;
+  }
+}
+.mainSlider .mainSliderContainer .swiper-slide .info .hint {
+  color: #fff;
+}
+.mainSlider .mainSliderContainer .swiper-slide .info .btns {
+  display: flex;
+  padding-top: 20px;
+  gap: 10px;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .mainSlider .mainSliderContainer .swiper-slide .info .btns {
+    justify-content: center;
+  }
+}
+.mainSlider .mainSliderContainer .swiper-slide .info .btns .btn {
+  background-color: var(--mainColor);
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+}
+.mainSlider .swiper-slide-active .sliderTitle {
+  animation: fadeInUp 1s 0.75s both;
+}
+.mainSlider .swiper-slide-active .hint {
+  animation: fadeInUp 1s 0s both;
+}
+.mainSlider .swiper-slide-active a {
+  animation: fadeInUp 1s 1.5s both;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+.mainSlider .swiperBtns {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .mainSlider .swiperBtns {
+    display: none;
+  }
+}
+.mainSlider .swiperBtns .swiper-button-next,
+.mainSlider .swiperBtns .swiper-button-prev {
+  color: #fff;
+}
+.mainSlider .swiperBtns .swiper-button-next:hover,
+.mainSlider .swiperBtns .swiper-button-prev:hover {
+  color: #fff;
+}
+.mainSlider::after {
+  content: "";
+  width: 130%;
+  height: 6.5vw;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  transform: rotate(6deg);
+}
+.mainSlider::before {
+  content: "";
+  width: 130%;
+  height: 6.5vw;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  transform: rotate(-6deg);
+}
+
+.btnDefault {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--mainColor);
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  isolation: isolate;
+}
+.btnDefault:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: var(--secondColor);
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  left: 0;
+}
+.btnDefault span {
+  text-align: center;
+  width: 100%;
+  padding: 12px 24px;
+  color: var(--whiteColor);
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+.btnDefault:hover span {
+  color: var(--whiteColor);
+  animation: scaleUp 0.3s ease-in-out;
+}
+.btnDefault:hover::after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
