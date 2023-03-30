@@ -1029,10 +1029,65 @@ header {
   padding: 150px 30px;
   background-color: var(--mainColor);
   border-radius: 24px;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(rgba(43, 77, 158, 0.8392156863), rgba(43, 77, 158, 0.8392156863)), url(../img/16265785_rm373-15.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 .requestQuote .request h1 {
   font-weight: bold;
   color: var(--whiteColor);
+}
+
+.completedProjects {
+  background-color: var(--mainColor10);
+  padding: 70px 0;
+  position: relative;
+}
+.completedProjects .title {
+  position: sticky;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.completedProjects .title h1 {
+  font-weight: bold;
+  color: var(--mainColor);
+  font-size: 40px !important;
+}
+@media (max-width: 768px) {
+  .completedProjects .title h1 {
+    font-size: 24px !important;
+  }
+}
+.completedProjects .title p {
+  color: var(--textColor);
+  width: 90%;
+}
+.completedProjects .project {
+  background-color: var(--whiteColor);
+  padding: 16px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.completedProjects .project img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+  border-radius: 24px;
+  margin-bottom: 20px;
+}
+.completedProjects .project p {
+  color: var(--textColor);
+}
+.completedProjects .project h6 {
+  font-weight: bold;
 }
 
 /* PC device :991px. */
