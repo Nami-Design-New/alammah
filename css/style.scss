@@ -1017,7 +1017,8 @@ header {
     border-radius: 24px;
     isolation: isolate;
     overflow: hidden;
-    background: linear-gradient(#2b4d9ed6 , #2b4d9ed6) , url(../img/16265785_rm373-15.jpg);
+    background: linear-gradient(#2b4d9ed6, #2b4d9ed6),
+      url(../img/16265785_rm373-15.jpg);
     background-attachment: fixed;
     background-size: cover;
     // .bg{
@@ -1038,30 +1039,34 @@ header {
   }
 }
 
-.completedProjects{
+.completedProjects {
   background-color: var(--mainColor10);
   padding: 70px 0;
   position: relative;
-  .title{
+  .title {
     position: sticky;
     top: 150px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    h1{
+    padding-bottom: 100px;
+    @media (max-width: 768px) {
+      padding-bottom: 16px;
+    }
+    h1 {
       font-weight: bold;
       color: var(--mainColor);
       font-size: 40px !important;
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         font-size: 24px !important;
       }
     }
-    p{
+    p {
       color: var(--textColor);
       width: 90%;
     }
   }
-  .project{
+  .project {
     background-color: var(--whiteColor);
     padding: 16px;
     border-radius: 24px;
@@ -1069,42 +1074,60 @@ header {
     flex-direction: column;
     gap: 12px;
     height: 100%;
-    img{
+    img {
       width: 100%;
       object-fit: cover;
       aspect-ratio: 3/2;
       border-radius: 24px;
       margin-bottom: 20px;
-
     }
-    p{
+    p {
       color: var(--textColor);
     }
-    h6{
+    h6 {
       font-weight: bold;
     }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+    .logo {
+      height: 40px;
+      object-fit: contain;
+    }
+    p{
+      width: calc(100% - 40px);
+      color: var(--textColor);
+    }
+  }
+  a{
+    &:hover{
+      color: var(--secondColor) !important;
+    }
+  }
+  .icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--blackColor);
+    color: var(--blackColor);
+    transition: var(--transition);
+    &:hover{
+      background-color: var(--mainColor);
+      color: var(--whiteColor) !important;
+      transform: translateY(-5px);
+      border-color: var(--mainColor);
+    }
+  }
+}
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
