@@ -1,25 +1,21 @@
 $(document).ready(function () {
   // navbar hide in scroll down
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    var appScroll = $(document).scrollTop();
-    if (appScroll >= 100) {
-      $("header").css({
-        top: "0px",
-      });
-    }
-    if (prevScrollpos > currentScrollPos) {
-      $("header").css({
-        top: "0px",
-      });
-    } else {
-      $("header").css({
-        top: "-100%",
-      });
-    }
-    prevScrollpos = currentScrollPos;
-  };
+  // var prevScrollpos = window.pageYOffset;
+  // window.onscroll = function () {
+  //   var currentScrollPos = window.pageYOffset;
+  //   var appScroll = $(document).scrollTop();
+
+  //   if (prevScrollpos > currentScrollPos) {
+  //     $("header").css({
+  //       top: "0px",
+  //     });
+  //   } else {
+  //     $("header").css({
+  //       top: "-100%",
+  //     });
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // };
   //MainSlider
   var mainSlider = new Swiper(".mainSliderContainer", {
     spaceBetween: 0,

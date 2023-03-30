@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -28,78 +27,76 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <header>
-    <section class="topNav">
-      <div class="links">
-        <a href="#!"> <i class="fa-regular fa-heart"></i> <span> المفضلة </span></a>
-        <a href="#!"> <i class="fa-sharp fa-regular fa-cart-shopping"></i> <span> السلة </span></a>
-      </div>
-      <div class="dropDowns">
-        <div class="dropdown">
-          <button class="dropdown-toggle" data-bs-toggle="dropdown">
-            <i class="fa-regular fa-globe"></i>
-            <span>اللغة</span>
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item active" href="#"> عربي </a>
-            <a class="dropdown-item" href="#"> English </a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropdown-toggle" data-bs-toggle="dropdown">
-            <i class="fa-sharp fa-regular fa-circle-dollar"></i>
-            <span>العملة</span>
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item active" href="#"> SAR </a>
-            <a class="dropdown-item" href="#"> USD </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <nav class="navbar navbar-expand-md sticky-top">
-      <div class="container">
-        <a class="logo" href="#">
-          <img src="img/logo.svg" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navControl"
-          aria-controls="navControl" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <section class="topNav">
+    <div class="links">
+      <a href="#!"> <i class="fa-regular fa-heart"></i> <span> المفضلة </span></a>
+      <a href="#!"> <i class="fa-sharp fa-regular fa-cart-shopping"></i> <span> السلة </span></a>
+    </div>
+    <div class="dropDowns">
+      <div class="dropdown">
+        <button class="dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="fa-regular fa-globe"></i>
+          <span>اللغة</span>
         </button>
-        <div class="collapse navbar-collapse" id="navControl">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
-            <li class="nav-item">
-              <a class="nav-link active" href="#"> الرئيسية </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> المتجر </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> من نحن </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> تواصل معنا </a>
-            </li>
-            <li class="dropdown">
-              <a class="nav-link dropdown-toggle pe-4" href="#" data-bs-toggle="dropdown"> حسابي </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"> تسجيل دخول </a>
-                <a class="dropdown-item" href="#"> حسابي </a>
-                <a class="dropdown-item" href="#"> مشترياتي </a>
-                <a class="dropdown-item" href="#"> تسجيل خروج </a>
-              </div>
-            </li>
+        <div class="dropdown-menu">
+          <a class="dropdown-item active" href="#"> عربي </a>
+          <a class="dropdown-item" href="#"> English </a>
         </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="fa-sharp fa-regular fa-circle-dollar"></i>
+          <span>العملة</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item active" href="#"> SAR </a>
+          <a class="dropdown-item" href="#"> USD </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="logo" href="#">
+        <img src="img/logo.svg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navControl"
+        aria-controls="navControl" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navControl">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"> الرئيسية </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> المتجر </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> من نحن </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> تواصل معنا </a>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link dropdown-toggle pe-4" href="#" data-bs-toggle="dropdown"> حسابي </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"> تسجيل دخول </a>
+              <a class="dropdown-item" href="#"> حسابي </a>
+              <a class="dropdown-item" href="#"> مشترياتي </a>
+              <a class="dropdown-item" href="#"> تسجيل خروج </a>
+            </div>
+          </li>
+          
         </ul>
         <div class="search">
           <i class="fa-sharp fa-light fa-magnifying-glass"></i>
           <input type="search" class="form-control " placeholder="ما الذي تبحث عنه ..؟">
         </div>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
   <!-- ================ /Header ================= -->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((((( content )))))))))))))))))))-->
@@ -313,7 +310,7 @@
               <div class="info">
                 <div class="content">
                   <div class="icon">
-                  <img src="img/fav.svg" alt="">
+                    <img src="img/fav.svg" alt="">
                   </div>
                   <h3> أجهزة الاتصالات اللاسلكية والسلكية </h3>
                   <p>
@@ -328,7 +325,7 @@
               <div class="info">
                 <div class="content">
                   <div class="icon">
-                  <img src="img/fav.svg" alt="">
+                    <img src="img/fav.svg" alt="">
                   </div>
                   <h3>
                     أجهزة تحديد المواقع
@@ -344,7 +341,7 @@
               <div class="info">
                 <div class="content">
                   <div class="icon">
-                  <img src="img/fav.svg" alt="">
+                    <img src="img/fav.svg" alt="">
                   </div>
                   <h3>
                     المستلزمات المكتبية
@@ -360,7 +357,7 @@
               <div class="info">
                 <div class="content">
                   <div class="icon">
-                  <img src="img/fav.svg" alt="">
+                    <img src="img/fav.svg" alt="">
                   </div>
                   <h3>
                     التجهيزات العسكرية وتجهيزات انفاذ القانون
@@ -411,5 +408,4 @@
   <!-- custom -->
   <script src="js/custom.js"></script>
 </body>
-
 </html>
