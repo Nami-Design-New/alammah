@@ -58,6 +58,29 @@ $(document).ready(function () {
       this.swiper.autoplay.start();
     }
   );
+  var mission = new Swiper(".mission", {
+    navigation: {
+      nextEl: ".missionNext",
+      prevEl: ".missionPrev",
+    },
+    pagination: {
+      el: ".servicesSlidePagination",
+      type: "fraction",
+    },
+    // loop: true,
+    spaceBetween: 24,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints:{
+      576: { slidesPerView: 2 },
+      992: { slidesPerView: 3 }
+    }
+  });
+
+ 
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
