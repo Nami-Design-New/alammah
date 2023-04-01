@@ -1127,7 +1127,8 @@ footer {
 }
 .heroBanner {
   padding: 100px 0 100px;
-  background-color: var(--mainColor);
+  background: linear-gradient(90deg , #2b4e9eb9 , #2b4e9eed ), url(../img/13722099_5328478.jpg) ;
+  background-size: cover ,  100px 100px ;
   color: var(--whiteColor);
   .breadcrumb {
     a {
@@ -1145,6 +1146,9 @@ footer {
   h1 {
     font-size: 40px !important;
     font-weight: bold;
+    @media (max-width:768px) {
+      font-size: 26px !important;
+    }
   }
 }
 .aboutPage {

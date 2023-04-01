@@ -1134,7 +1134,8 @@ footer .icon:hover {
 
 .heroBanner {
   padding: 100px 0 100px;
-  background-color: var(--mainColor);
+  background: linear-gradient(90deg, rgba(43, 78, 158, 0.7254901961), rgba(43, 78, 158, 0.9294117647)), url(../img/13722099_5328478.jpg);
+  background-size: cover, 100px 100px;
   color: var(--whiteColor);
 }
 .heroBanner .breadcrumb a {
@@ -1149,6 +1150,11 @@ footer .icon:hover {
 .heroBanner h1 {
   font-size: 40px !important;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .heroBanner h1 {
+    font-size: 26px !important;
+  }
 }
 
 .aboutPage {
