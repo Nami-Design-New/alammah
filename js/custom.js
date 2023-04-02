@@ -102,6 +102,21 @@ $(document).ready(function () {
     },
   });
 
+    //product Details Slider
+    var productDetailsSlider = new Swiper(".productDetailsSlider", {
+      spaceBetween: 10,
+      centeredSlides: true,
+      pagination: {
+        el: ".productDetailsSliderPagination",
+        clickable: true,
+      },
+      speed: 700,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+    
   // quantity
   $(".plus").click(function () {
     $(this)
