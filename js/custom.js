@@ -74,13 +74,46 @@ $(document).ready(function () {
       delay: 2500,
       disableOnInteraction: false,
     },
-    breakpoints:{
+    breakpoints: {
       576: { slidesPerView: 2 },
-      992: { slidesPerView: 3 }
-    }
+      992: { slidesPerView: 3 },
+    },
   });
 
- 
+  // $(".hideSideBtn").click(function () {
+  //   $(".shop .shopSide").toggleClass("showSide");
+  // });
+
+  var swiper = new Swiper(".productSlider", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: false,
+    speed: 1000,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // quantity
+  $(".plus").click(function () {
+    $(this)
+      .prev()
+      .val(+$(this).prev().val() + 1);
+  });
+  $(".min").click(function () {
+    if ($(this).next().val() > 1)
+      $(this)
+        .next()
+        .val(+$(this).next().val() - 1);
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -114,15 +147,22 @@ $(document).ready(function () {
   $("section").each(function () {
     const sectionDivs = $(this).find("[data-aos]");
     sectionDivs.each(function (index) {
-      $(this).attr("data-aos-delay", (index + 1) * 150);
+      $(this).attr("data-aos-delay", (index + 1) * 100);
     });
   });
   // aos
   AOS.init({
     offset: 20,
     delay: 50,
-    duration: 1000,
+    duration: 750,
     // easing: "linear",
     once: true,
   });
+
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
 });
