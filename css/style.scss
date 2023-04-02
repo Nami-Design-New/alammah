@@ -1973,7 +1973,8 @@ footer {
       border-radius: 8px;
       display: flex;
       // width: 100%;
-      flex: 1 200px;
+      flex: 1 250px;
+      min-height: 48px;
       input {
         border: none;
         margin: 0 5px;
@@ -2001,6 +2002,7 @@ footer {
     button{
       flex: 1 120px;
       justify-content: center;
+      min-height: 48px;
     }
     .favorite {
       padding: 4px;
@@ -2185,8 +2187,7 @@ footer {
     border-radius: 16px;
     align-items: end;
     @media (max-width: 768px) {
-      padding: 0;
-      margin-top: 10px;
+      padding: 16px;
     }
     .secondTitle{
       flex: 1;

@@ -1979,7 +1979,8 @@ footer .icon:hover {
   background-color: var(--whiteColor);
   border-radius: 8px;
   display: flex;
-  flex: 1 200px;
+  flex: 1 250px;
+  min-height: 48px;
 }
 .productDetailsPage .control .quantity input {
   border: none;
@@ -2009,6 +2010,7 @@ footer .icon:hover {
 .productDetailsPage .control button {
   flex: 1 120px;
   justify-content: center;
+  min-height: 48px;
 }
 .productDetailsPage .control .favorite {
   padding: 4px;
@@ -2183,8 +2185,7 @@ footer .icon:hover {
 }
 @media (max-width: 768px) {
   .productDetailsPage .rateForm {
-    padding: 0;
-    margin-top: 10px;
+    padding: 16px;
   }
 }
 .productDetailsPage .rateForm .secondTitle {
