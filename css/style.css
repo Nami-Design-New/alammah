@@ -106,6 +106,14 @@ img {
   box-shadow: none;
 }
 
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  border-color: transparent;
+}
+
 input {
   accent-color: var(--mainColor) !important;
 }
@@ -382,9 +390,13 @@ button {
   box-shadow: none;
 }
 
-.tooltip-inner {
+.tooltip .tooltip-inner {
+  background-color: var(--textColor);
   font-size: 12px;
   padding: 8px 16px;
+}
+.tooltip .tooltip-arrow::before {
+  border-top-color: var(--textColor) !important;
 }
 
 header {
@@ -694,6 +706,7 @@ header {
   overflow: hidden;
   border: 1px solid #fff;
   isolation: isolate;
+  min-width: 48px;
 }
 .btnDefault:after {
   content: " ";
@@ -1700,6 +1713,7 @@ footer .icon:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
 }
 .shop .allProducts .product .productSlider {
   border-radius: 12px;
@@ -1711,7 +1725,6 @@ footer .icon:hover {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  cursor: zoom-in;
   mix-blend-mode: multiply;
 }
 .shop .allProducts .product .swiper-button-prev,
@@ -1739,8 +1752,12 @@ footer .icon:hover {
   gap: 8px;
   flex: 1;
 }
-.shop .allProducts .product .content h6 {
-  padding: 8px;
+.shop .allProducts .product .content a {
+  color: var(--blackColor);
+  padding: 12px;
+}
+.shop .allProducts .product .content a:hover {
+  color: var(--secondColor);
 }
 .shop .allProducts .product .content .control {
   display: flex;
@@ -1748,7 +1765,7 @@ footer .icon:hover {
   margin-top: auto;
 }
 .shop .allProducts .product .content .control .quantity {
-  border: 1px solid var(--mainColor);
+  border: 1px solid #eee;
   background-color: var(--whiteColor);
   border-radius: 8px;
   display: flex;
@@ -1777,6 +1794,14 @@ footer .icon:hover {
     min-width: 32px;
     min-height: 32px;
   }
+}
+.shop .allProducts .product .content .control .favorite {
+  padding: 4px;
+  font-size: 24px;
+  color: var(--textColor);
+}
+.shop .allProducts .product .content .control .favorite.active {
+  color: red;
 }
 .shop .showType {
   display: flex;
