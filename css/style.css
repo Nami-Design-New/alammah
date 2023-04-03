@@ -401,13 +401,12 @@ button {
   box-shadow: none;
 }
 
-.tooltip .tooltip-inner {
-  background-color: var(--textColor);
-  font-size: 10px;
-  padding: 8px 16px;
+.tooltip {
+  --bs-tooltip-bg: var(--textColor);
 }
-.tooltip .tooltip-arrow::before {
-  border-top-color: var(--textColor) !important;
+.tooltip .tooltip-inner {
+  font-size: 10px;
+  padding: 8px 16px !important;
 }
 
 header {
@@ -1808,14 +1807,14 @@ footer .icon:hover {
 }
 .shop .allProducts .product .content .control .favorite {
   border-radius: 100px;
-  width: 28px;
-  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 8px;
-  left: 8px;
+  right: 8px;
   z-index: 2;
   background-color: #e6e6e6;
   color: var(--textColor);
