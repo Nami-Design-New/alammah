@@ -368,7 +368,7 @@ button {
 .tooltip {
   .tooltip-inner {
     background-color: var(--textColor);
-    font-size: 12px;
+    font-size: 10px;
     padding: 8px 16px;
   }
   .tooltip-arrow::before {
@@ -1801,10 +1801,21 @@ footer {
             }
           }
           .favorite {
-            padding: 4px;
+            border-radius: 100px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            z-index: 2;
+            background-color: #e6e6e6;
             color: var(--textColor);
             &.active {
-              color: red;
+              color: var(--whiteColor);
+              background-color: red;
             }
           }
         }
@@ -2024,16 +2035,17 @@ footer {
       }
     }
     button {
-      flex: 1 120px;
+      flex: 1 110px;
       justify-content: center;
       min-height: 48px;
+      white-space: nowrap;
     }
     .favorite {
-      padding: 4px;
-      font-size: 24px;
-      color: var(--textColor);
+      max-width: 48px;
+      border-radius: 100px;
       &.active {
-        color: red;
+        color: var(--whiteColor);
+        background-color: red;
       }
     }
   }

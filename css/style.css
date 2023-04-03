@@ -403,7 +403,7 @@ button {
 
 .tooltip .tooltip-inner {
   background-color: var(--textColor);
-  font-size: 12px;
+  font-size: 10px;
   padding: 8px 16px;
 }
 .tooltip .tooltip-arrow::before {
@@ -1807,11 +1807,22 @@ footer .icon:hover {
   }
 }
 .shop .allProducts .product .content .control .favorite {
-  padding: 4px;
+  border-radius: 100px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  background-color: #e6e6e6;
   color: var(--textColor);
 }
 .shop .allProducts .product .content .control .favorite.active {
-  color: red;
+  color: var(--whiteColor);
+  background-color: red;
 }
 .shop .allProducts .listShow .product {
   flex-direction: row;
@@ -2032,17 +2043,18 @@ footer .icon:hover {
   }
 }
 .productDetailsPage .control button {
-  flex: 1 120px;
+  flex: 1 110px;
   justify-content: center;
   min-height: 48px;
+  white-space: nowrap;
 }
 .productDetailsPage .control .favorite {
-  padding: 4px;
-  font-size: 24px;
-  color: var(--textColor);
+  max-width: 48px;
+  border-radius: 100px;
 }
 .productDetailsPage .control .favorite.active {
-  color: red;
+  color: var(--whiteColor);
+  background-color: red;
 }
 .productDetailsPage .detailsTabs {
   padding: 24px;
