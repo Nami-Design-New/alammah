@@ -1737,13 +1737,12 @@ footer .icon:hover {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  mix-blend-mode: multiply;
 }
 .shop .allProducts .product .swiper-button-prev,
 .shop .allProducts .product .swiper-button-next {
-  color: #eee;
-  width: 30px;
-  height: 30px;
+  color: #d6d6d6;
+  width: 20px;
+  height: 20px;
   transition: var(--transition);
   border-radius: 100px;
 }
@@ -1756,7 +1755,7 @@ footer .icon:hover {
 .shop .allProducts .product .swiper-button-next::after,
 .shop .allProducts .product .swiper-button-next::before {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 14px;
 }
 .shop .allProducts .product .content {
   display: flex;
@@ -1813,6 +1812,29 @@ footer .icon:hover {
 }
 .shop .allProducts .product .content .control .favorite.active {
   color: red;
+}
+.shop .allProducts .listShow .product {
+  flex-direction: row;
+}
+.shop .allProducts .listShow .product .productSlider {
+  width: 120px;
+}
+.shop .allProducts .listShow .product .productSlider img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.shop .allProducts .listShow .content {
+  flex: 1;
+}
+.shop .allProducts .listShow .content .control {
+  flex-wrap: wrap;
+}
+.shop .allProducts .listShow .content .control .quantity {
+  flex: 1 160px;
+}
+.shop .allProducts .listShow .content .control button {
+  flex: 1 80px;
+  justify-content: center;
 }
 .shop .showType {
   display: flex;

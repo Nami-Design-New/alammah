@@ -129,6 +129,12 @@ $(document).ready(function () {
         .next()
         .val(+$(this).next().val() - 1);
   });
+
+  $(".listDisplay").click(function () {
+    $(".allProducts .row .showCol").removeClass("col-sm-6 col-lg-4 col-xl-3").addClass("col-sm-12 col-xl-6 listShow")
+  });
+
+  
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

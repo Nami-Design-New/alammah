@@ -89,13 +89,12 @@ img {
   height: auto;
   display: inline-block;
 }
-
-.btn{
+.btn {
   font-size: 12px;
   display: flex;
   gap: 8px;
   align-items: center;
-  i{
+  i {
     font-size: 16px;
   }
 }
@@ -1736,14 +1735,13 @@ footer {
           object-fit: contain;
           width: 100%;
           // cursor: zoom-in;
-          mix-blend-mode: multiply;
         }
       }
       .swiper-button-prev,
       .swiper-button-next {
-        color: #eee;
-        width: 30px;
-        height: 30px;
+        color: #d6d6d6;
+        width: 20px;
+        height: 20px;
         transition: var(--transition);
         border-radius: 100px;
         &:hover {
@@ -1753,7 +1751,7 @@ footer {
         &::after,
         &::before {
           font-weight: 300;
-          font-size: 20px;
+          font-size: 14px;
         }
       }
       .content {
@@ -1808,6 +1806,31 @@ footer {
             &.active {
               color: red;
             }
+          }
+        }
+      }
+    }
+    .listShow {
+      .product {
+        flex-direction: row;
+        .productSlider {
+          width: 120px;
+          img {
+            height: 100%;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+      .content {
+        flex: 1;
+        .control {
+          flex-wrap: wrap;
+          .quantity {
+            flex: 1 160px;
+          }
+          button {
+            flex: 1 80px;
+            justify-content: center;
           }
         }
       }
@@ -1960,7 +1983,6 @@ footer {
       }
     }
   }
-
   .control {
     display: flex;
     gap: 8px;
@@ -1999,7 +2021,7 @@ footer {
         }
       }
     }
-    button{
+    button {
       flex: 1 120px;
       justify-content: center;
       min-height: 48px;
@@ -2019,7 +2041,6 @@ footer {
     margin-top: 50px;
     background-color: #fcfcfc;
     border-radius: 16px;
-  
     .nav-item {
       .nav-link {
         color: var(--mainColor);
@@ -2029,7 +2050,6 @@ footer {
         }
       }
     }
-  
     .tabsButtons {
       border-bottom: 1px solid #dcdcdc;
       padding-bottom: 15px;
@@ -2072,7 +2092,6 @@ footer {
     .infoTable {
       border-top: 1px solid #ddd;
       padding: 10px 0 22px;
-  
       width: 100%;
       & tbody {
         & tr {
@@ -2091,7 +2110,6 @@ footer {
       line-height: 35px;
       margin-bottom: 24px;
     }
-  
     .tab-content {
       padding-top: 24px;
     }
@@ -2115,7 +2133,6 @@ footer {
       display: flex;
       margin-bottom: 22px;
       gap: 20px;
-  
       @media (max-width: 568px) {
         flex-direction: column;
       }
@@ -2149,7 +2166,6 @@ footer {
           align-items: center;
           gap: 16px;
           flex-wrap: wrap;
-  
           h6 {
             display: flex;
             flex-direction: column;
@@ -2189,7 +2205,7 @@ footer {
     @media (max-width: 768px) {
       padding: 16px;
     }
-    .secondTitle{
+    .secondTitle {
       flex: 1;
       width: 100%;
       .stars {
@@ -2219,7 +2235,6 @@ footer {
         }
       }
     }
-   
     input.star-5:checked ~ label.star:before {
       color: #fe7;
     }
@@ -2228,7 +2243,6 @@ footer {
     }
   }
 }
-
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
