@@ -1813,6 +1813,7 @@ footer {
     .listShow {
       .product {
         flex-direction: row;
+        gap: 8px;
         .productSlider {
           width: 120px;
           img {
@@ -1831,6 +1832,7 @@ footer {
           button {
             flex: 1 80px;
             justify-content: center;
+            min-height: 32px;
           }
         }
       }

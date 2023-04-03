@@ -4,7 +4,6 @@ $(document).ready(function () {
   // window.onscroll = function () {
   //   var currentScrollPos = window.pageYOffset;
   //   var appScroll = $(document).scrollTop();
-
   //   if (prevScrollpos > currentScrollPos) {
   //     $("header").css({
   //       top: "0px",
@@ -79,11 +78,9 @@ $(document).ready(function () {
       992: { slidesPerView: 3 },
     },
   });
-
   // $(".hideSideBtn").click(function () {
   //   $(".shop .shopSide").toggleClass("showSide");
   // });
-
   var swiper = new Swiper(".productSlider", {
     spaceBetween: 0,
     centeredSlides: true,
@@ -101,22 +98,20 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
-    //product Details Slider
-    var productDetailsSlider = new Swiper(".productDetailsSlider", {
-      spaceBetween: 10,
-      centeredSlides: true,
-      pagination: {
-        el: ".productDetailsSliderPagination",
-        clickable: true,
-      },
-      speed: 700,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-    
+  //product Details Slider
+  var productDetailsSlider = new Swiper(".productDetailsSlider", {
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: {
+      el: ".productDetailsSliderPagination",
+      clickable: true,
+    },
+    speed: 700,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
   // quantity
   $(".plus").click(function () {
     $(this)
@@ -129,12 +124,21 @@ $(document).ready(function () {
         .next()
         .val(+$(this).next().val() - 1);
   });
-
+  const $showCol = $(".allProducts .row .showCol");
   $(".listDisplay").click(function () {
-    $(".allProducts .row .showCol").removeClass("col-sm-6 col-lg-4 col-xl-3").addClass("col-sm-12 col-xl-6 listShow")
+    if ($showCol.hasClass("col-sm-6 col-lg-4 col-xl-3")) {
+      $showCol
+        .removeClass("col-sm-6 col-lg-4 col-xl-3")
+        .addClass("col-sm-12 col-xl-6 listShow");
+    }
   });
-
-  
+  $(".gridDisplay").click(function () {
+    if ($showCol.hasClass("col-sm-12 col-xl-6 listShow")) {
+      $showCol
+        .removeClass("col-sm-12 col-xl-6 listShow")
+        .addClass("col-sm-6 col-lg-4 col-xl-3");
+    }
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -179,7 +183,6 @@ $(document).ready(function () {
     // easing: "linear",
     once: true,
   });
-
   const tooltipTriggerList = document.querySelectorAll(
     '[data-bs-toggle="tooltip"]'
   );

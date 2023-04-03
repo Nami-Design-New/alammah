@@ -1815,6 +1815,7 @@ footer .icon:hover {
 }
 .shop .allProducts .listShow .product {
   flex-direction: row;
+  gap: 8px;
 }
 .shop .allProducts .listShow .product .productSlider {
   width: 120px;
@@ -1835,6 +1836,7 @@ footer .icon:hover {
 .shop .allProducts .listShow .content .control button {
   flex: 1 80px;
   justify-content: center;
+  min-height: 32px;
 }
 .shop .showType {
   display: flex;
