@@ -111,142 +111,143 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html"> الرئيسية </a></li>
-            <li class="breadcrumb-item active" aria-current="page"> السلة </li>
+            <li class="breadcrumb-item active" aria-current="page"> المفضلة </li>
           </ol>
         </nav>
       </div>
     </section>
     <!--  -->
-    <div class="cartPage">
+    <section class="favoritePage">
       <div class="container">
         <div class="row">
-          <div class=" col-md-6 col-lg-7 p-0">
-            <div class="cart">
-              <!-- cart Products -->
-              <div class="cartProducts">
-                <!-- cart Product -->
-                <div class="cartProduct">
-                  <a href="productDetails.html">
-                    <img src="img/p1.jpg" class="productImg" alt="">
-                  </a>
-                  <div class="info">
-                    <h5 class="name">
-                      موتورولا MT-777 واكى توكى جهاز إرسال واستقبال ثنائى الاتجاه
-                    </h5>
-                    <!-- control  -->
-                    <div class="control">
-                      <div class="quantity">
-                        <button class="min"> - </button>
-                        <input type="text" class="qty" value="1" />
-                        <button class="plus"> + </button>
-                      </div>
-                      <button class=" delete">
-                        <i class="fa-solid fa-trash"></i>
-                      </button>
-                    </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 p-2 showCol">
+            <div class="product" data-aos="fade-up">
+              <div class="swiper productSlider ">
+                <div class="swiper-wrapper">
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p1.jpg" alt="">
+                  </div>
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p2.jpg" alt="">
                   </div>
                 </div>
-                <!-- cart Product -->
-                <div class="cartProduct">
-                  <a href="productDetails.html">
-                    <img src="img/p2.jpg" class="productImg" alt="">
-                  </a>
-                  <div class="info">
-                    <h5 class="name">
-                      جهاز إرسال واستقبال VHF AIS GPS بحري GX2200E من Standard Horizon (مرخص من هيئة
-                      الإتصالات)
-                    </h5>
-                    <!-- control  -->
-                    <div class="control">
-                      <div class="quantity">
-                        <button class="min"> - </button>
-                        <input type="text" class="qty" value="1" />
-                        <button class="plus"> + </button>
-                      </div>
-                      <button class=" delete">
-                        <i class="fa-solid fa-trash"></i>
-                      </button>
-                    </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+              <div class="content">
+                <a href="productDetails.html">
+                  جهاز إرسال واستقبال VHF AIS GPS بحري GX2200E من Standard Horizon (مرخص من هيئة
+                  الإتصالات)
+                </a>
+                <div class="control">
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" min="1" value="1" />
+                    <button class="plus"> + </button>
                   </div>
+                  <button class="btnDefault" data-bs-toggle="tooltip" data-bs-title=" اضافة للسلة ">
+                    <span>
+                      <i class="fa-sharp fa-light fa-cart-plus"></i>
+                    </span>
+                  </button>
+                  <button class="btn btn-light" data-bs-toggle="tooltip" data-bs-title=" طلب عرض سعر ">
+                    <i class="fa-regular fa-messages-dollar"></i>
+                  </button>
+                  <button class="favorite active" data-bs-toggle="tooltip" data-bs-title=" ازالة من المفضلة ">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class=" col-md-6 col-lg-5 p-0">
-            <div class="checkout">
-              <div class="sectionTitle">
-                <h3 class="title"> الفاتورة </h3>
+          <div class="col-sm-6 col-lg-4 col-xl-3 p-2 showCol">
+            <div class="product" data-aos="fade-up">
+              <div class="swiper productSlider ">
+                <div class="swiper-wrapper">
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p2.jpg" alt="">
+                  </div>
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p3.jpg" alt="">
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
               </div>
-              <!-- bill -->
-              <ul class="bill">
-                <li>
-                  <img src="img/p1.jpg" alt="">
-                  <div class="info">
-                    <p>
-                      موتورولا MT-777 واكى توكى جهاز إرسال واستقبال ثنائى الاتجاه
-                    </p>
-                    <div class="count">
-                      x <span> 2 </span>
-                    </div>
+              <div class="content">
+                <a href="productDetails.html">
+                  جهاز إرسال واستقبال VHF AIS GPS بحري GX2200E من Standard Horizon (مرخص من هيئة
+                  الإتصالات)
+                </a>
+                <div class="control">
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" min="1" value="1" />
+                    <button class="plus"> + </button>
                   </div>
-                </li>
-                <li>
-                  <img src="img/p2.jpg" alt="">
-                  <div class="info">
-                    <p>
-                      جهاز إرسال واستقبال VHF AIS GPS بحري GX2200E من Standard Horizon (مرخص من هيئة
-                      الإتصالات)
-                    </p>
-                    <div class="count">
-                      x <span> 2 </span>
-                    </div>
+                  <button class="btnDefault" data-bs-toggle="tooltip" data-bs-title=" اضافة للسلة ">
+                    <span>
+                      <i class="fa-sharp fa-light fa-cart-plus"></i>
+                    </span>
+                  </button>
+                  <button class="btn btn-light" data-bs-toggle="tooltip" data-bs-title=" طلب عرض سعر ">
+                    <i class="fa-regular fa-messages-dollar"></i>
+                  </button>
+                  <button class="favorite active" data-bs-toggle="tooltip" data-bs-title=" ازالة من المفضلة ">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 p-2 showCol">
+            <div class="product" data-aos="fade-up">
+              <div class="swiper productSlider ">
+                <div class="swiper-wrapper">
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p2.jpg" alt="">
                   </div>
-                </li>
-              </ul>
-              <div class="d-flex justify-content-end  py-2">
-                <!-- modal btn -->
-                <button data-bs-toggle="modal" data-bs-target="#shipping" class="btnDefault">
-                  <span> اتمام الطلب </span>
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="shipping" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h6 class="modal-title fw-bold"> بيانات الشحن </h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="mb-3">
-                            <label for="phone" class="form-label"> <i class="fa-light fa-phone me-1"></i> رقم الجوال
-                            </label>
-                            <input type="number" class="form-control" id="phone" placeholder="+996**********">
-                          </div>
-                          <div class="mb-3">
-                            <label for="location" class="form-label"> <i class="fa-light fa-location-dot me-1"></i>
-                              العنوان </label>
-                            <input type="text" class="form-control" id="location" placeholder=" مثال : الرياض شارع 22 ">
-                          </div>
-                          <div class="d-flex justify-content-end mt-5 ">
-                            <button type="button" class="btn mx-1 btn-outline-dark" data-bs-dismiss="modal"> الغاء
-                            </button>
-                            <button type="submit" class="btnDefault mx-1  ">
-                              <span> ارسال </span>
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
+                  <!-- cv image -->
+                  <div class="swiper-slide ">
+                    <img src="img/p3.jpg" alt="">
                   </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+              <div class="content">
+                <a href="productDetails.html">
+                  موتورولا MT-777 واكى توكى جهاز إرسال واستقبال ثنائى الاتجاه
+                </a>
+                <div class="control">
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" min="1" value="1" />
+                    <button class="plus"> + </button>
+                  </div>
+                  <button class="btnDefault" data-bs-toggle="tooltip" data-bs-title=" اضافة للسلة ">
+                    <span>
+                      <i class="fa-sharp fa-light fa-cart-plus"></i>
+                    </span>
+                  </button>
+                  <button class="btn btn-light" data-bs-toggle="tooltip" data-bs-title=" طلب عرض سعر ">
+                    <i class="fa-regular fa-messages-dollar"></i>
+                  </button>
+                  <button class="favorite active" data-bs-toggle="tooltip" data-bs-title=" ازالة من المفضلة ">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
