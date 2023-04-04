@@ -361,6 +361,7 @@ button {
   background-color: transparent;
 }
 .form-control {
+  min-height: 54px;
   &:focus {
     box-shadow: none;
   }
@@ -2254,6 +2255,174 @@ footer {
     }
   }
 }
+
+.cartPage {
+  margin: 30px 0;
+  .cart {
+    background-color: #e6f3fa;
+    border-radius: 16px;
+    padding: 8px;
+    position: relative;
+    border: 1px solid var(--mainColor30);
+    margin-left: 20px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+
+    .cartProducts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .cartProduct {
+        display: flex;
+        background-color: var(--whiteColor);
+        border-radius: 16px;
+        padding: 20px;
+        @media (max-width: 992px) {
+          padding: 10px;
+        }
+        a {
+          display: block;
+          margin-left: 10px;
+          img {
+            height: 150px;
+            min-width: 150px;
+            object-fit: contain;
+            border-radius: 8px;
+            @media (max-width: 992px) {
+              height: 100px;
+              min-width: 100px;
+            }
+          }
+        }
+        .info {
+          width: 100%;
+          @media (max-width: 992px) {
+            padding: 10px 0;
+          }
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .name {
+            color: var(--blackColor);
+          }
+          .control {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+            .quantity {
+              border: 1px solid #eee;
+              background-color: var(--whiteColor);
+              border-radius: 8px;
+              display: flex;
+              // width: 100%;
+              input {
+                border: none;
+                margin: 0 5px;
+                text-align: center;
+                width: 100%;
+                min-width: 20px;
+              }
+              button {
+                border: none;
+                min-width: 32px;
+                min-height: 32px;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                font-size: 24px !important;
+                color: var(--mainColor);
+                @media (max-width: 992px) {
+                  min-width: 32px;
+                  min-height: 32px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .title {
+      position: relative;
+      font-weight: bold;
+      padding-right: 20px;
+      &::before {
+        content: "";
+        width: 10px;
+        height: 100%;
+        background-color: var(--secondColor);
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px !important;
+      padding-right: 10px;
+    }
+  }
+  .checkout {
+    background-color: var(--secondColor10);
+    border: 1px solid var(--secondColor30);
+
+    // height: 100%;
+    border-radius: 16px;
+    padding: 16px 8px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+ 
+  .bill {
+    background-color: var(--whiteColor);
+    border-radius: 16px;
+    margin-top: 20px;
+    padding: 8px;
+    list-style: none;
+    li {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed #eee;
+      &:last-child {
+        padding-bottom: 0px;
+        border-bottom: none;
+      }
+      img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        border-radius: 8px;
+        margin-left: 10px;
+      }
+      .info {
+        p {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        span {
+          color: var(--mainColor);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
@@ -2322,7 +2491,7 @@ footer {
     font-size: 16px !important;
   }
   h5 {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
   h6 {
     font-size: 13px !important;

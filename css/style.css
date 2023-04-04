@@ -397,6 +397,9 @@ button {
   background-color: transparent;
 }
 
+.form-control {
+  min-height: 54px;
+}
 .form-control:focus {
   box-shadow: none;
 }
@@ -2260,6 +2263,180 @@ footer .icon:hover {
   color: red;
 }
 
+.cartPage {
+  margin: 30px 0;
+}
+.cartPage .cart {
+  background-color: #e6f3fa;
+  border-radius: 16px;
+  padding: 8px;
+  position: relative;
+  border: 1px solid var(--mainColor30);
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .cartPage .cart {
+    margin-left: 0;
+  }
+}
+.cartPage .cart .cartProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cartPage .cart .cartProducts .cartProduct {
+  display: flex;
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .cartPage .cart .cartProducts .cartProduct {
+    padding: 10px;
+  }
+}
+.cartPage .cart .cartProducts .cartProduct a {
+  display: block;
+  margin-left: 10px;
+}
+.cartPage .cart .cartProducts .cartProduct a img {
+  height: 150px;
+  min-width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+}
+@media (max-width: 992px) {
+  .cartPage .cart .cartProducts .cartProduct a img {
+    height: 100px;
+    min-width: 100px;
+  }
+}
+.cartPage .cart .cartProducts .cartProduct .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 992px) {
+  .cartPage .cart .cartProducts .cartProduct .info {
+    padding: 10px 0;
+  }
+}
+.cartPage .cart .cartProducts .cartProduct .info .name {
+  color: var(--blackColor);
+}
+.cartPage .cart .cartProducts .cartProduct .info .control {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.cartPage .cart .cartProducts .cartProduct .info .control .quantity {
+  border: 1px solid #eee;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  display: flex;
+}
+.cartPage .cart .cartProducts .cartProduct .info .control .quantity input {
+  border: none;
+  margin: 0 5px;
+  text-align: center;
+  width: 100%;
+  min-width: 20px;
+}
+.cartPage .cart .cartProducts .cartProduct .info .control .quantity button {
+  border: none;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  font-size: 24px !important;
+  color: var(--mainColor);
+}
+@media (max-width: 992px) {
+  .cartPage .cart .cartProducts .cartProduct .info .control .quantity button {
+    min-width: 32px;
+    min-height: 32px;
+  }
+}
+.cartPage .sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cartPage .sectionTitle .title {
+  position: relative;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.cartPage .sectionTitle .title::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: var(--secondColor);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.cartPage .sectionTitle a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px !important;
+  padding-right: 10px;
+}
+.cartPage .checkout {
+  background-color: var(--secondColor10);
+  border: 1px solid var(--secondColor30);
+  border-radius: 16px;
+  padding: 16px 8px;
+}
+@media (max-width: 768px) {
+  .cartPage .checkout {
+    margin-top: 20px;
+  }
+}
+.cartPage .bill {
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  margin-top: 20px;
+  padding: 8px;
+  list-style: none;
+}
+.cartPage .bill li {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+}
+.cartPage .bill li:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.cartPage .bill li img {
+  width: 72px;
+  height: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.cartPage .bill li .info p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.cartPage .bill li .info span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
 /* PC device :991px. */
 @media (min-width: 991px) {
   body {
@@ -2305,7 +2482,7 @@ footer .icon:hover {
     font-size: 16px !important;
   }
   h5 {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
   h6 {
     font-size: 13px !important;
